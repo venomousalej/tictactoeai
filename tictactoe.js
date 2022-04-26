@@ -283,6 +283,7 @@ function win() {
         winCond()
     } else {
         winCondition = false
+        winCond()
     }
 }
 
@@ -298,7 +299,9 @@ function winCond() {
     } else {
         if (game.some(n => n == 0)) return;
         winnerMessage = "Draw!"
-        console.log("Draw!")
+        turn.innerText = "Draw!"
+        ourdiv.style = "pointer-events: none;"
+        finish()
     }
 
 }
