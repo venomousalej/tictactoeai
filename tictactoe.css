@@ -1,0 +1,138 @@
+@media screen and (max-width: 420px) and (orientation: portrait) and (max-height: 650px) {
+  .game {
+    width: 370px;
+    height: 370px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    left: 60px;
+  }
+}
+
+@media screen and (min-width: 850px) and (orientation: landscape) {
+  .game {
+    width: 480px;
+    height: 480px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    top: 60px;
+    left: 370px;
+  }
+
+  .box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid red;
+    position: relative;
+    margin: 2px;
+    margin-left: 5px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-family: "Times New Roman", Times, serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .turn {
+    position: absolute;
+    float: right;
+    top: 10%;
+    right: 15%;
+    width: max-content;
+    height: max-content;
+    font-size: 48px;
+    font-family: "Times New Roman", Times, serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  #turn {
+    color: green;
+  }
+  .finish {
+    z-index: -1;
+  }
+
+  @keyframes slow {
+    from {
+      opacity: 0;
+      background: gray;
+    }
+    to {
+      opacity: 0.8;
+      background: black;
+    }
+  }
+
+  .finishslow {
+    animation: 2s slow ease-in-out forwards;
+    z-index: 1;
+  }
+  .restart {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 300px;
+    height: 100px;
+    border: 1px solid red;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    font-size: 64px;
+    text-shadow: 6px 4px 6px;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+      to right,
+      rgba(72, 61, 139, 0.2),
+      rgba(72, 61, 139, 0.9)
+    );
+    border-radius: 45px;
+  }
+  .second {
+    display: flex;
+    opacity: 0;
+    background-image: linear-gradient(
+      to left,
+      rgba(72, 61, 139, 0.2),
+      rgba(72, 61, 139, 0.9)
+    );
+    z-index: -1;
+  }
+
+  .restartslow {
+    animation: slowrestart 3s ease-in-out forwards;
+  }
+
+  @keyframes slowrestart {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 0.9;
+    }
+  }
+}
